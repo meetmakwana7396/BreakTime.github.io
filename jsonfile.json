@@ -1,0 +1,13 @@
+[
+    {"item": "Manchuriyan","price": 50,"qnt": 0},
+    {"item": "Paneer Chillie","price": 90,"qnt": 0},
+    {"item": "Dhosa","price": 50,"qnt": 0},
+    {"item": "Grill-Sandwhich","price": 70,"qnt": 0},
+    {"item": "Manchurian-Rice","price": 50,"qnt": 0},
+    {"item": "Manchurian-Noodles","price": 50,"qnt": 0},
+    {"item": "Paav-Bhaji","price": 50,"qnt": 0},
+    {"item": "Puff","price": 50,"qnt": 0},
+    {"item": "Pulaav","price": 50,"qnt": 0},
+    {"item": "Samosa","price": 50,"qnt": 0},
+    {"item": "Vadapav","price": 50,"qnt": 0}
+]

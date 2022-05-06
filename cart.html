@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="fonts/icomoon/style.css"> -->
+
+    <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- <link rel="stylesheet" href="css/fontAwesome.css"> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jquary -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Break Time!</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
+</head>
+
+<style>
+    .payment-info {
+        background: #e4be6e;
+        padding: 10px;
+        border-radius: 6px;
+        color: #fff;
+        font-weight: bold
+    }
+    
+    .product-details {
+        padding: 10px
+    }
+    
+    body {
+        background: #f9f0da
+    }
+    
+    .cart {
+        background: #fff
+    }
+    
+    .p-about {
+        font-size: 12px
+    }
+    
+    .table-shadow {
+        -webkit-box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
+        box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42)
+    }
+    
+    .type {
+        font-weight: 400;
+        font-size: 10px
+    }
+    
+    label.radio {
+        cursor: pointer
+    }
+    
+    label.radio input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        pointer-events: none
+    }
+    
+    label.radio span {
+        padding: 1px 12px;
+        border: 2px solid #ada9a9;
+        display: inline-block;
+        color: #8f37aa;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 300
+    }
+    
+    label.radio input:checked+span {
+        border-color: #fff;
+        background-color: #f9f0da;
+        color: black
+    }
+    
+    .credit-inputs {
+        background: #f9f0da;
+        color: black !important;
+        border-color: #f9f0da
+    }
+    
+    .credit-inputs::placeholder {
+        color: black;
+        font-size: 13px
+    }
+    
+    .credit-card-label {
+        font-size: 15px;
+        font-weight: 900
+    }
+    
+    .form-control.credit-inputs:focus {
+        background: #abebc6;
+        border: #abebc6
+    }
+    
+    .line {
+        border-bottom: 1px solid #f9f0da
+    }
+    
+    .information span {
+        font-size: 15px;
+        font-weight: 500
+    }
+    
+    .information {
+        margin-bottom: 5px
+    }
+    
+    .items {
+        -webkit-box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.25);
+        box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.08)
+    }
+    
+    .spec {
+        font-size: 11px
+    }
+    
+    #food1,
+    #food2,
+    #food3,
+    #food4,
+    #food5,
+    #food6,
+    #food7,
+    #food8,
+    #food9,
+    #food10,
+    #food11 {
+        display: none;
+    }
+</style>
+
+
+<body onload="list_order()">
+
+    <header id="header"></header>
+
+    <!-- cart -->
+    <div class="container mt-5 p-3 rounded cart" style="margin-top:2%;margin-bottom: 10%;">
+        <div class="row no-gutters">
+            <div class="col-md-8">
+                <div class="product-details mr-2">
+                    <div class="d-flex flex-row align-items-center"><a href="menu.html" class="link-dark"><i class="fa fa-long-arrow-left"></i><span class="ml-2">Continue Eating </span></a></div>
+                    <hr>
+                    <h6 class="mb-0">Food cart</h6>
+                    <div class="d-flex justify-content-between"><span>Your<span id="totalitemincart">  </span> odered items in your cart</span>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="price ml-2"><span class="mr-1">price</span></div>
+                        </div>
+                    </div>
+                    <div id="food1">
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded" style="display: none;">
+                            <div class="d-flex flex-row"><img class="rounded" src="food/manchu.jpg" width="100">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Manchurian</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block" id="itoms1">2</span><span class="d-block ml-5 font-weight-bold" id="price1">50</span> <button type="button" class="btn btn-danger" id="ditom1" onclick="cancel_order(0)"> <i class="fas fa-trash-alt"></i> </button>                                </div>
+                        </div>
+                    </div>
+
+                    <div id="food2">
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded" src="food/paneer-tikka.jpg" width="100">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Paneer Chillie</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block" id="itoms2">2</span><span class="d-block ml-5 font-weight-bold" id="price2">50</span> <button type="button" class="btn btn-danger" id="ditom2" onclick="cancel_order(1)"> <i class="fas fa-trash-alt"></i> </button>                                </div>
+                        </div>
+                    </div>
+
+                    <div id="food3">
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded" src="food/dhosa.jpg" width="100">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Dhosa</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block" id="itoms3">2</span><span class="d-block ml-5 font-weight-bold" id="price3">50</span> <button type="button" class="btn btn-danger" id="ditom3" onclick="cancel_order(2)"> <i class="fas fa-trash-alt"></i> </button>                                </div>
+                        </div>
+                    </div>
+
+                    <div id="food4">
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded" src="food/grill_sand.jpg" width="100">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Grill-Sandwhich</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block" id="itoms4">2</span><span class="d-block ml-5 font-weight-bold" id="price4">70</span> <button type="button" class="btn btn-danger" id="ditom4" onclick="cancel_order(3)"> <i class="fas fa-trash-alt"></i> </button>                                </divbutton>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="food5">
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded" src="food/manchurian-rice.jpg" width="100">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Manchurian-Rice</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block" id="itoms5">2</span><span class="d-block ml-5 font-weight-bold" id="price5">70</span> <button type="button" class="btn btn-danger" id="ditom5" onclick="cancel_order(4)"> <i class="fas fa-trash-alt"></i> </button>                                </div>
+                        </div>
+                    </div>
+
+                    <div id="food6">
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded" src="food/manchurian-noodles.jpg" width="100">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Manchurian-Noodles</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block" id="itoms6">2</span><span class="d-block ml-5 font-weight-bold" id="price6">50</span> <button type="button" class="btn btn-danger" id="ditom6" onclick="cancel_order(5)"> <i class="fas fa-trash-alt"></i> </button>                                </div>
+                        </div>
+                    </div>
+
+                    <div id="food7">
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded" src="food/paav-bhaji.jpg" width="100">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Paav-Bhaji</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block" id="itoms7">2</span><span class="d-block ml-5 font-weight-bold" id="price7">50</span> <button type="button" class="btn btn-danger" id="ditom7" onclick="cancel_order(6)"> <i class="fas fa-trash-alt"></i> </button>                                </div>
+                        </div>
+                    </div>
+                    <div id="food8">
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded" src="food/puff.jpg" width="100">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Puff</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block" id="itoms8">2</span><span class="d-block ml-5 font-weight-bold" id="price8">50</span> <button type="button" class="btn btn-danger" id="ditom8" onclick="cancel_order(7)"> <i class="fas fa-trash-alt"></i> </button>                                </div>
+                        </div>
+                    </div>
+                    <div id="food9">
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded" src="food/pulaav.jpg" width="100">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Pulao</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block" id="itoms9">2</span><span class="d-block ml-5 font-weight-bold" id="price9">50</span> <button type="button" class="btn btn-danger" id="ditom9" onclick="cancel_order(8)"> <i class="fas fa-trash-alt"></i> </button>                                </div>
+                        </div>
+                    </div>
+                    <div id="food10">
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded" src="food/samosa.jpeg" width="100">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Samosa</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block" id="itoms10">2</span><span class="d-block ml-5 font-weight-bold" id="price10">50</span> <button type="button" class="btn btn-danger" id="ditom10" onclick="cancel_order(9)"> <i class="fas fa-trash-alt"></i> </button>                                </div>
+                        </div>
+                    </div>
+                    <div id="food11">
+                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                            <div class="d-flex flex-row"><img class="rounded" src="food/vadapavnew.jpg" width="100">
+                                <div class="ml-2"><span class="font-weight-bold d-block">Vadapav</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center"><span class="d-block" id="itoms11">2</span><span class="d-block ml-5 font-weight-bold" id="price11">50</span> <button type="button" class="btn btn-danger" id="ditom11" onclick="cancel_order(10)"> <i class="fas fa-trash-alt"></i> </button>                                </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="payment-info">
+                    <div class="d-flex justify-content-between align-items-center"><span>Card details</span>
+                        <!--<img class="rounded" src="https://i.imgur.com/WU501C8.jpg" width="30">--></div><span class="type d-block mt-3 mb-1" style="font-size:15px;font-weight:500;">Card type</span><label class="radio"> 
+                    <input type="radio" name="card" value="payment" checked> <span><img width="30" src="card/mastercard.png" /></span> </label>
+                    <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="card/visa.png" /></span> </label>
+                    <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="card/amex.png" /></span> </label>
+                    <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="card/paypal.png" /></span> </label>
+                    <div><label class="credit-card-label">Name on card</label><input type="text" class="form-control credit-inputs" placeholder="Name"></div>
+                    <div><label class="credit-card-label">Card number</label><input type="text" class="form-control credit-inputs" placeholder="0000 0000 0000 0000"></div>
+                    <div class="row">
+                        <div class="col-md-6"><label class="credit-card-label">Date</label><input type="text" class="form-control credit-inputs" placeholder="12/24"></div>
+                        <div class="col-md-6"><label class="credit-card-label">CVV</label><input type="text" class="form-control credit-inputs" placeholder="342"></div>
+                    </div>
+                    <hr class="line">
+                    <!-- <div class="d-flex justify-content-between information"><span>Subtotal</span><span>$3000.00</span></div> -->
+                    <!-- <div class="d-flex justify-content-between information"><span>Shipping</span><span>$20.00</span></div> -->
+                    <!-- <div class="d-flex justify-content-between information"><span>Total(Incl. taxes)</span><span>$3020.00</span></div>-->
+                    <button class="btn btn-primary btn-block d-flex justify-content-between mt-3" type="button" onclick="payment()">Payment</button></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cart end -->
+
+    <div id="footer"></div>
+</body>
+
+</html>
+<script>
+    function list_order() {
+        var a1 = 0,
+            a2 = 0,
+            a3 = 0,
+            a4 = 0,
+            a5 = 0,
+            a6 = 0,
+            a7 = 0,
+            a8 = 0,
+            a9 = 0,
+            a10 = 0,
+            a11 = 0;
+        var item = [];
+        for (var i = 0; i < localStorage.length; i++) {
+            item[i] = localStorage.getItem(localStorage.key(i));
+            //    alert(localStorage.key(i)+ " " +item[i]);
+            if (localStorage.key(i) != "j") {
+                if (item[i] == "0") {
+                    a1 = a1 + 1;
+                } else if (item[i] == "1") {
+                    a2 = a2 + 1;
+                } else if (item[i] == "2") {
+                    a3 = a3 + 1;
+                } else if (item[i] == "3") {
+                    a4 = a4 + 1;
+                } else if (item[i] == "4") {
+                    a5 = a5 + 1;
+                } else if (item[i] == "5") {
+                    a6 = a6 + 1;
+                } else if (item[i] == "6") {
+                    a7 = a7 + 1;
+                } else if (item[i] == "7") {
+                    a8 = a8 + 1;
+                } else if (item[i] == "8") {
+                    a9 = a9 + 1;
+                } else if (item[i] == "9") {
+                    a10 = a10 + 1;
+                } else if (item[i] == "10") {
+                    a11 = a11 + 1;
+                }
+            }
+        }
+
+        for (var i = 0; i < item.length; i++) {
+            if (localStorage.key(i) != "j") {
+                if (item[i] == 0) {
+                    document.getElementById("food1").style.display = "block";
+                    document.getElementById("itoms1").innerHTML = a1;
+                    document.getElementById("price1").innerHTML = a1 * 50;
+                } else if (item[i] == "1") {
+                    document.getElementById("food2").style.display = "block";
+                    document.getElementById("itoms2").innerHTML = a2;
+                    document.getElementById("price2").innerHTML = a2 * 50;
+                } else if (item[i] == "2") {
+                    document.getElementById("food3").style.display = "block";
+                    document.getElementById("itoms3").innerHTML = a3;
+                    document.getElementById("price3").innerHTML = a3 * 50;
+                } else if (item[i] == "3") {
+                    document.getElementById("food4").style.display = "block";
+                    document.getElementById("itoms4").innerHTML = a4;
+                    document.getElementById("price4").innerHTML = a4 * 50;
+                } else if (item[i] == "4") {
+                    document.getElementById("food5").style.display = "block";
+                    document.getElementById("itoms5").innerHTML = a5;
+                    document.getElementById("price5").innerHTML = a5 * 50;
+                } else if (item[i] == "5") {
+                    document.getElementById("food6").style.display = "block";
+                    document.getElementById("itoms6").innerHTML = a6;
+                    document.getElementById("price6").innerHTML = a6 * 50;
+                } else if (item[i] == "6") {
+                    document.getElementById("food7").style.display = "block";
+                    document.getElementById("itoms7").innerHTML = a7;
+                    document.getElementById("price7").innerHTML = a7 * 50;
+                } else if (item[i] == "7") {
+                    document.getElementById("food8").style.display = "block";
+                    document.getElementById("itoms8").innerHTML = a8;
+                    document.getElementById("price8").innerHTML = a8 * 50;
+                } else if (item[i] == "8") {
+                    document.getElementById("food9").style.display = "block";
+                    document.getElementById("itoms9").innerHTML = a9;
+                    document.getElementById("price9").innerHTML = a9 * 50;
+                } else if (item[i] == "9") {
+                    document.getElementById("food10").style.display = "block";
+                    document.getElementById("itoms10").innerHTML = a10;
+                    document.getElementById("price10").innerHTML = a10 * 50;
+                } else if (item[i] == "10") {
+                    document.getElementById("food11").style.display = "block";
+                    document.getElementById("itoms11").innerHTML = a11;
+                    document.getElementById("price11").innerHTML = a11 * 50;
+                }
+            }
+        }
+    }
+
+
+    function cancel_order(x) {
+        var a = "food" + (x + 1);
+        document.getElementById(a).style.display = "none";
+        // alert(localStorage.length);
+        for (var i = 0; i < localStorage.length; i++) {
+            // alert(localStorage.getItem(localStorage.key(i)));
+            if (localStorage.getItem(localStorage.key(i)) == x) {
+                localStorage.removeItem(localStorage.key(i));
+            }
+
+        }
+    }
+
+    function payment() {
+        document.getElementById("food11").style.display = "none";
+        document.getElementById("food10").style.display = "none";
+        document.getElementById("food9").style.display = "none";
+        document.getElementById("food8").style.display = "none";
+        document.getElementById("food7").style.display = "none";
+        document.getElementById("food6").style.display = "none";
+        document.getElementById("food5").style.display = "none";
+        document.getElementById("food4").style.display = "none";
+        document.getElementById("food3").style.display = "none";
+        document.getElementById("food2").style.display = "none";
+        document.getElementById("food1").style.display = "none";
+        localStorage.clear()
+    }
+
+    $(document).ready(function() {
+        $("#header").load("header.html");
+
+        $("#footer").load("footer.html");
+    });
+</script>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="fonts/icomoon/style.css"> -->
+
+    <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- <link rel="stylesheet" href="css/fontAwesome.css"> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jquary -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container-for-contact-us {
+            width: 100%;
+            height: 100vh;
+            background-color: #f9f0da;
+        }
+        
+        .container-for-contact-us .main-container-for-it {
+            position: relative;
+            width: 50%;
+            height: 60vh;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 15px;
+            display: inline-flex;
+        }
+        
+        .container-for-contact-us .main-container-for-it .container-for-mgf-pic {
+            width: 50%;
+            height: 60vh;
+        }
+        
+        .container-for-contact-us .main-container-for-it .container-for-mgf-pic img {
+            width: 35%;
+            height: 25%;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: ease-in 0.7s;
+        }
+        
+        .container-for-contact-us .main-container-for-it .container-for-mgf-pic img:hover {
+            width: 55%;
+            height: 35%;
+            transition: ease-in 0.7s;
+        }
+        
+        .container-for-contact-us .main-container-for-it .container-for-contacts-us-form {
+            width: 50%;
+            height: 60vh;
+            text-align: center;
+        }
+        
+        .container-for-contact-us .main-container-for-it .container-for-contacts-us-form p {
+            font-size: 25px;
+            font-weight: 900;
+            margin: 5% 5% 1% 5%;
+        }
+        
+        .container-for-contact-us .main-container-for-it .container-for-contacts-us-form .form-container-with-title {
+            margin-top: 10px;
+            padding-top: 20px;
+        }
+        
+        .container-for-contact-us .main-container-for-it .container-for-contacts-us-form form {
+            display: block;
+            margin: 5% 15% 15% 15%;
+        }
+        
+        .container-for-contact-us .main-container-for-it .container-for-contacts-us-form form input {
+            margin: 1.5%;
+            margin-bottom: 5%;
+            width: 100%;
+            font-size: 20px;
+            border-radius: 20px;
+            padding: 10px 5px 10px 20px;
+            border: none;
+            background-color: rgba(144, 144, 144, 0.465);
+            font-weight: 900;
+            color: grey;
+        }
+        
+        .container-for-contact-us .main-container-for-it .container-for-contacts-us-form form textarea {
+            margin: 1.5%;
+            width: 100%;
+            font-size: 20px;
+            border-radius: 15px;
+            padding: 5px 5px 10px 15px;
+            border: none;
+            background-color: rgba(144, 144, 144, 0.465);
+            font-weight: bolder;
+            color: grey;
+        }
+        
+        .container-for-contact-us .main-container-for-it .container-for-contacts-us-form form #btn-submit {
+            width: 50%;
+            padding: 2%;
+            margin-left: 50px;
+            border-radius: 30px;
+            background-color: white;
+            border: 2px solid #239964;
+            color: #239964;
+            transition: ease 0.7s;
+        }
+        
+        .container-for-contact-us .main-container-for-it .container-for-contacts-us-form form #btn-submit:hover {
+            color: white;
+            background-color: #239964;
+            transition: ease 0.7s;
+        }
+        /* media query for the tablets and ipad  */
+        
+        @media (max-width: 768px) {
+            .container-for-contact-us .main-container-for-it {
+                width: 95%;
+                height: 55vh;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-mgf-pic {
+                display: none;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form {
+                width: 100%;
+                height: 60vh;
+                text-align: center;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form .form-container-with-title {
+                margin-top: 15px;
+                padding-top: 15px;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form p {
+                margin-bottom: 30px;
+                font-size: 35px;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form form {
+                margin: 2%;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form form input {
+                width: 75%;
+                margin-bottom: 2%;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form form textarea {
+                width: 76%;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form form #btn-submit {
+                width: 30%;
+                margin-top: 15px;
+            }
+        }
+        /* media query for mobile devices */
+        
+        @media (max-width: 480px) {
+            .container-for-contact-us .main-container-for-it {
+                width: 90%;
+                height: 75vh;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-mgf-pic {
+                display: none;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form {
+                width: 100%;
+                height: 80vh;
+                text-align: center;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form .form-container-with-title {
+                margin-top: 30px;
+                padding-top: 30px;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form p {
+                margin-bottom: 50px;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form form {
+                margin: 5%;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form form input {
+                width: 80%;
+                margin: 0 2% 5% 1%;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form form textarea {
+                width: 80%;
+                margin: 0 2% 2% 1%;
+            }
+            .container-for-contact-us .main-container-for-it .container-for-contacts-us-form form #btn-submit {
+                margin-top: 15px;
+                font-size: 15px;
+                width: 40%;
+            }
+        }
+    </style>
+
+</head>
+
+<header id="header"></header>
+
+
+
+<body>
+    <div class="container-for-contact-us">
+        <div class="main-container-for-it">
+            <div class="container-for-mgf-pic">
+                <img src="images/msglogo.png" alt="Message Us">
+            </div>
+            <div class="container-for-contacts-us-form">
+                <div class="form-container-with-title">
+                    <p>Get In touch</p>
+                    <form action="/submit.php" method="post" onsubmit="return validate_form()">
+                        <input type="text" value="Name" id="name" oninput="check_name()">
+                        <input type="text" value="Email" id="email" oninput="check_email()">
+                        <input type="text" value="Subject" id="subject" oninput="check_subject">
+                        <textarea name="msg" id="msg" cols="40" rows="4" oninput="check_msg">Message</textarea>
+                        <input type="submit" value=" Send Email 🠒" id="btn-submit" onclick="validate_feedback_form()">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+<script>
+    $(document).ready(function() {
+        $("#header").load("header.html");
+
+        $("#footer").load("footer.html");
+    });
+</script>
+
+</html>
+
+<script>
+    // for msg  field 
+    function check_msg() {
+        var msg = document.getElementById("msg");
+        if (msg.innerHTML == "" || msg.innerHTML == "Message") {
+            msg.innerHTML = "Please Enter Feedback message";
+            msg.focus();
+            return false;
+        } else {
+            msg.innerHTML = "";
+            return true;
+        }
+    }
+
+    // for subject field
+    function check_subject() {
+        var subject = document.getElementById("subject");
+        if (subject.value == "" || subject.value == "Subject") {
+            subject.value = "Please Enter Subject";
+            subject.focus()
+            return false;
+        } else {
+            subject.value = "";
+            return true;
+        }
+    }
+
+    // for name field 
+    function check_name() {
+        var name = document.getElementById("name");
+        var namePattern = /\d/;
+        if (name.value == "" || name.value == "Name") {
+            name.value = "Enter proper name";
+            name.focus();
+            return false;
+        } else {
+            name.value = "";
+            return true;
+        }
+    }
+
+    // for email field
+    function check_email() {
+        var email = document.getElementById("email");
+        var emailPapert = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+
+        if (!emailPapert.test(email.value)) {
+            email.value = "Enter correct email";
+            email.focus()
+            return false;
+        } else {
+            email.value = "";
+            return true;
+        }
+    }
+
+    //form valiating
+    function validate_form() {
+        if (check_name() && check_email() && check_subject() && check_msg()) {
+            alert("All valid");
+            return true;
+        } else {
+            alert("Invalid");
+            return false;
+        }
+        //return true; 
+    }
+</script>

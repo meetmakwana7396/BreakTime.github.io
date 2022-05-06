@@ -1,0 +1,383 @@
+/* body {
+    background-color: #FFCDD2
+} */
+
+.bg-black {
+    background-color: #f1c40f;
+}
+
+#logo {
+    width: 50px;
+    height: 30px;
+    border-radius: 4px
+}
+
+.navbar-brand {
+    padding: 14px 20px;
+    font-size: 20px;
+}
+
+.navbar-nav {
+    width: 100%
+}
+
+.nav-item {
+    padding: 6px 14px;
+    text-align: center
+}
+
+.nav-link {
+    padding-bottom: 10px;
+    color: black;
+}
+
+.v-line {
+    background-color: black;
+    width: 1px;
+    height: 23px;
+}
+
+.navbar-collapse.collapse.in {
+    display: block !important
+}
+
+@media (max-width: 576px) {
+    .nav-item {
+        width: 100%;
+        text-align: left
+    }
+
+    .v-line {
+        display: none
+    }
+}
+      /* #header 
+      {
+          top: 0;
+          position: sticky;
+          width: 100%;
+      } */
+
+      #footer
+      {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #f1c40f ;
+      }
+
+
+      /* meet's menu */
+      /* Menu CSS */
+
+      *margin {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+
+      .wrapper {
+          width: 1200px;
+          margin: 100px auto;
+          
+      }
+
+      .title {
+          text-align: center;
+          margin-bottom: 70px;
+      }
+
+      .title h4 {
+          text-transform: capitalize;
+          font-size: 36px;
+          position: relative;
+          display: inline-block;
+          padding-bottom: 10px;
+      }
+
+      .title h4 span {
+          display: block;
+          font-size: 18px;
+          font-style: italic;
+          margin-bottom: -5px;
+      }
+
+      .title h4:before {
+          position: absolute;
+          content: "";
+          width: 200px;
+          height: 1px;
+          background-color: rgb(236, 166, 35);
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          padding-bottom: 10px;
+      }
+
+      .menu {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
+
+      .single-menu {
+          flex-basis: 580px;
+          margin-bottom: 40px;
+          padding-bottom: 40px;
+          border-bottom: 1px solid #ddd;
+      }
+
+      .single-menu:hover img {
+          border-radius: 30px;
+      }
+
+      .single-menu:nth-child(5),
+      .single-menu:nth-child(6) {
+          border-bottom: 0;
+      }
+
+      .single-menu {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+      }
+
+      .single-menu img {
+          max-width: 180;
+          margin-right: 30px;
+          border-radius: 50%;
+          border: 1px solid black;
+          padding: 3px;
+          transition: 0.5s;
+      }
+
+      .single-menu h4 {
+          text-transform: capitalize;
+          font-size: 22px;
+          border-bottom: 1px dashed #333;
+          margin-bottom: 5px;
+          padding-bottom: 5px;
+      }
+
+      .single-menu h4 span {
+          float: right;
+          color: rgb(246, 139, 16);
+          font-style: italic;
+      }
+
+
+      /* Add Button CSS */
+
+      .addbtn {
+          border-radius: 60px;
+          background-color: transparent;
+          height: 30px;
+          width: 80px;
+          color: rgb(236, 166, 35);
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          border: 1px solid rgb(236, 166, 35);
+          transition: 0.5s;
+      }
+
+      .addbtn:hover {
+          background-color: rgb(236, 166, 35);
+          color: white;
+          border: none;
+      }
+
+
+      /* Detaail Button CSS */
+
+      .detbtn {
+          border-radius: 60px;
+          background-color: transparent;
+          height: 30px;
+          width: 80px;
+          color: rgb(31, 149, 31);
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          border: 1px solid rgb(31, 149, 31);
+          transition: 0.5s;
+      }
+
+      .detbtn:hover {
+          background-color: rgb(31, 149, 31);
+          color: white;
+          border: none;
+      }
+      #menubody {
+        background-color: rgba(246, 230, 194, 0.6);
+      }
+
+      /* food more info------------------------------------------------------------------------------------------------------ */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+      
+      /* Modal Content */
+      .modal-content {
+        /* background-color: ; */
+        margin: auto;
+        padding: 20px;
+        border: 5px dashed rgb(0, 0, 0);
+        border-radius: 20px;
+        width: 80%;
+    }
+      
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        float: left;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      
+/* home page css ------------------------------------------------------------------------------ */
+.section{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: rgba(120, 115, 115, 0.19);
+}
+
+.section h2.section-head{
+    color: #000;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section h2.section-head:after{
+    background: #f1c40f;
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 20px auto;
+}
+
+#banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/bg3.jpg) no-repeat 0 0;
+    background-size: cover;
+}
+
+.banner-title h1{
+    display: inline-block;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+}
+#banner{
+    height: 35rem;
+}
+.banner-title{
+    padding-top: 5rem;
+    font-family: 'Roboto Slab', serif;
+
+}
+.banner-title p.lead{
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+#explorebtn{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px 25px;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+#explorebtn:hover{
+    color: white;
+    background-color: #f1c40f;
+    border: 1px solid #f1c40f;
+}
+
+/* #Part1 CSS ==============================================================================*/
+#part1 {
+    background-color: rgb(255, 255, 255);
+}
+
+#para1 {
+    text-align: center;
+    color: #000;
+    font-size: x-large;
+    padding-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 550;
+}
+
+#sh{
+    color: #f1c40f; 
+    font-weight: bold;
+}
+
+/* ========================================================================================== */
+#part2 {
+    background-color: #dbe4f3;
+    /* border:1px solid #000; */
+}
+
+#para2 {
+    text-align: center;
+    color: #000;
+    font-size: x-large;
+    padding-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 550;
+}
+#sh1{
+    color: #83aff7; 
+    font-weight: bold;
+}
+#img2{
+    padding-top: 100px;
+    padding-left: 50px;
+}
+
+.service-box{
+    text-align: center;
+}
+
+.service-box i.fa-solid{
+    color: #f1c40f;
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+
+/* #spacemaker{
+    padding-top: 100px;
+    border: 1px solid black;
+} */
+html {
+    scroll-behavior: smooth;
+}
+
+

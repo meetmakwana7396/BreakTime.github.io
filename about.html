@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="fonts/icomoon/style.css"> -->
+
+    <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- <link rel="stylesheet" href="css/fontAwesome.css"> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jquary -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Break Time!</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
+    
+    html {
+        box-sizing: border-box;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+    
+    .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+    }
+    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+    }
+    
+    .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #f9f0da;
+        color: black;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+    
+    .container::after,
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .title {
+        color: grey;
+    }
+    
+    .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    .button:hover {
+        background-color: #555;
+    }
+    
+    @media screen and (max-width: 650px) {
+        .column {
+            width: 100%;
+            display: block;
+        }
+    }
+</style>
+
+
+
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>Break Time!</p>
+        <p>Here Are some Dishes That our customers Loves, You must try atleast one of these Once.</p>
+    </div>
+    <br> <br> <br>
+    <h2 style="text-align:center">Our Best Dishes</h2>
+    <div class="row" style="width:80%;margin-left:10%">
+        <div class="column">
+            <div class="card">
+                <img src="food/grill_sand.jpg" alt="" style="width:100%">
+                <div class="container">
+                    <h2>Grill Sandwich</h2>
+                    <!-- <p class="title">CEO & Founder</p> -->
+                    <p>3 Layer belly filler sandwhich😈😈😈😈😈😈😈😈😈😈.</p>
+                    <!-- <p>jane@example.com</p> -->
+                    <p><button class="button">More info.</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="food/manchu.jpg" alt="Mike" style="width:100%">
+                <div class="container">
+                    <h2>Manchurian</h2>
+                    <!-- <p class="title">Art Director</p> -->
+                    <p>Something Hot, spicy and freash!? "Manchurian🤤🤤"</p>
+                    <!-- <p>mike@example.com</p> -->
+                    <p><button class="button">More info.</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="food/manchurian-noodles.jpg" alt="John" style="width:100%">
+                <div class="container">
+                    <h2>Manchurian Noodles</h2>
+                    <!-- <p class="title">Designer</p> -->
+                    <p>A noodles mixed with Manchurian👻👻👻👻👻👻.</p>
+                    <!-- <p>john@example.com</p> -->
+                    <p><button class="button">More info.</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br> <br>
+    <div id="footer"></div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function() {
+        $("#header").load("header.html");
+
+        $("#footer").load("footer.html");
+    });
+</script>

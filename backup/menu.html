@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="fonts/icomoon/style.css"> -->
+
+    <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jquary -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Break Time!</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.jpeg">
+</head>
+
+<body id="menubody">
+    <header id="header"></header>
+
+    <div class="wrapper">
+        <div class="title">
+            <h4><span>Fresh food for good health</span>MENU</h4>
+        </div>
+        <div class="menu">
+            <div class="single-menu">
+                <img src="food/manchu.jpg" alt="" height="200px" width="200px">
+                <div class="menu-content">
+                    <h4>Manchurian<span>50 Rs</span></h4>
+                    <p>Something Hot, spicy and freash!? "Manchurian🤤🤤"</p>
+                    <input type="button" onclick="oreder(0,document.getElementById('quantity1').value)" value="Add" class="addbtn">
+                    <input type="button" onclick="showmodel(1)" value="Details" class="detbtn">
+                    <input type="number" min="1" value="1" id="quantity1" style="width:20%;background-color: transparent;border-radius:20px;">
+                </div>
+            </div>
+
+            <div class="single-menu">
+                <img src="food/paneer-tikka.jpg" alt="" height="200px" width="200px">
+                <div class="menu-content">
+                    <h4>Paneer Chillie <span>90 Rs</span></h4>
+                    <p>For Paneer Lovers..........😮😮😮😮😮😮😮😮😮</p>
+                    <input type="button" onclick="oreder(1,document.getElementById('quantity2').value)" value="Add" class="addbtn">
+                    <input type="button" onclick="showmodel(2)" value="Details" class="detbtn">
+                    <input type="number" min="1" value="1" id="quantity2" style="width:20%;background-color: transparent;border-radius:20px;">
+
+                </div>
+            </div>
+
+            <div class="single-menu">
+                <img src="food/dhosa.jpg" alt="" height="200px" width="200px">
+                <div class="menu-content">
+                    <h4>Dhosa<span>50 Rs</span></h4>
+                    <p>All time favourite Snack!! Dhosa...Dhosa...Dhosa.....</p>
+                    <input type="button" onclick="oreder(2,document.getElementById('quantity3').value)" value="Add" class="addbtn">
+                    <input type="button" onclick="showmodel(3)" value="Details" class="detbtn">
+                    <input type="number" min="1" value="1" id="quantity3" style="width:20%;background-color: transparent;border-radius:20px;">
+
+                </div>
+            </div>
+
+            <div class="single-menu">
+                <img src="food/grill_sand.jpg" alt="" height="200px" width="200px">
+                <div class="menu-content">
+                    <h4>Grill-Sandwhich<span>70 Rs</span></h4>
+                    <p>3 Layer belly filler sandwhich😈😈😈😈😈😈😈😈😈😈.</p>
+                    <input type="button" onclick="oreder(3,document.getElementById('quantity4').value)" value="Add" class="addbtn">
+                    <input type="button" onclick="showmodel(4)" value="Details" class="detbtn">
+                    <input type="number" min="1" value="1" id="quantity4" style="width:20%;background-color: transparent;border-radius:20px;">
+
+                </div>
+            </div>
+
+            <div class="single-menu">
+                <img src="food/manchurian-rice.jpg" alt="" height="200px" width="200px">
+                <div class="menu-content">
+                    <h4>Manchurian-Rice<span>50 Rs</span></h4>
+                    <p>Just Order It Yyyyyyyooooouuuuuuuuuu Will Love It.</p>
+                    <input type="button" onclick="oreder(4,document.getElementById('quantity5').value)" value="Add" class="addbtn">
+                    <input type="button" onclick="showmodel(5)" value="Details" class="detbtn">
+                    <input type="number" min="1" value="1" id="quantity5" style="width:20%;background-color: transparent;border-radius:20px;">
+
+                </div>
+            </div>
+
+            <div class="single-menu">
+                <img src="food/manchurian-noodles.jpg" alt="" height="200px" width="200px">
+                <div class="menu-content">
+                    <h4>Manchurian-Noodles<span>50 Rs</span></h4>
+                    <p>A noodles mixed with Manchurian👻👻👻👻👻👻</p>
+                    <input type="button" onclick="oreder(5,document.getElementById('quantity6').value)" value="Add" class="addbtn">
+                    <input type="button" onclick="showmodel(6)" value="Details" class="detbtn">
+                    <input type="number" min="1" value="1" id="quantity6" style="width:20%;background-color: transparent;border-radius:20px;">
+
+                </div>
+            </div>
+
+            <div class="single-menu">
+                <img src="food/paav-bhaji.jpg" alt="" height="200px" width="200px">
+                <div class="menu-content">
+                    <h4>Paav-Bhaji<span>50 Rs</span></h4>
+                    <p>A noodles mixed with Manchurian👻👻👻👻👻👻</p>
+                    <input type="button" onclick="oreder(6,document.getElementById('quantity7').value)" value="Add" class="addbtn">
+                    <input type="button" onclick="showmodel(7)" value="Details" class="detbtn">
+                    <input type="number" min="1" value="1" id="quantity7" style="width:20%;background-color: transparent;border-radius:20px;">
+
+                </div>
+            </div>
+
+            <div class="single-menu">
+                <img src="food/puff.jpg" alt="" height="200px" width="200px">
+                <div class="menu-content">
+                    <h4>Puff<span>50 Rs</span></h4>
+                    <p>A noodles mixed with Manchurian👻👻👻👻👻👻</p>
+                    <input type="button" onclick="oreder(7,document.getElementById('quantity8').value)" value="Add" class="addbtn">
+                    <input type="button" onclick="showmodel(8)" value="Details" class="detbtn">
+                    <input type="number" min="1" value="1" id="quantity8" style="width:20%;background-color: transparent;border-radius:20px;">
+
+
+                </div>
+            </div>
+
+            <div class="single-menu">
+                <img src="food/pulaav.jpg" alt="" height="200px" width="200px">
+                <div class="menu-content">
+                    <h4>Pulaav</h4><span>50 Rs</span></h4>
+                    <p>A noodles mixed with Manchurian👻👻👻👻👻👻</p>
+                    <input type="button" onclick="oreder(8,document.getElementById('quantity9').value)" value="Add" class="addbtn">
+                    <input type="button" onclick="showmodel(9)" value="Details" class="detbtn">
+                    <input type="number" min="1" value="1" id="quantity9" style="width:20%;background-color: transparent;border-radius:20px;">
+
+                </div>
+            </div>
+
+            <div class="single-menu">
+                <img src="food/samosa.jpeg" alt="" height="200px" width="200px">
+                <div class="menu-content">
+                    <h4>Samosa<span>50 Rs</span></h4>
+                    <p>A noodles mixed with Manchurian👻👻👻👻👻👻</p>
+                    <input type="button" onclick="oreder(9,document.getElementById('quantity10').value)" value="Add" class="addbtn">
+                    <input type="button" onclick="showmodel(10)" value="Details" class="detbtn">
+                    <input type="number" min="1" value="1" id="quantity10" style="width:20%;background-color: transparent;border-radius:20px;">
+
+                </div>
+            </div>
+
+            <div class="single-menu">
+                <img src="food/vadapaav.jpg" alt="" height="200px" width="200px">
+                <div class="menu-content">
+                    <h4>Vadapav<span>50 Rs</span></h4>
+                    <p>A noodles mixed with Manchurian👻👻👻👻👻👻</p>
+                    <input type="button" onclick="oreder(10,2)" value="Add" class="addbtn">
+                    <input type="button" onclick="showmodel(11)" value="Details" class="detbtn">
+                    <input type="number" min="1" value="1" id="quantity11" style="width:20%;background-color: transparent;border-radius:20px;">
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- model of food -->
+        <!-- <button id="myBtn">Open Modal</button> -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content" style="height:500px; width:500px;">
+                
+                   <!-- <span id="close" class="close" onclick="closemodal()">&times;</span> -->
+                   
+                <div class="column">
+                    <br>
+                    <div class="card" style="height:350px; width:350px ;margin-left:15%;border:0px">
+                        <img src="food/manchu.jpg" alt="Mike" id="model-image" height="250px" width="350px">
+                        <div class="container">
+                            <h2 id="titleoffood"></h2>
+                            <p id="discriptionoffood"></p>
+                            <button onclick="closemodal()" class="btn btn-outline-success" > OK </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="footer"></div>
+</body>
+
+</html>
+
+<script>
+    
+    function showmodel(x) {
+        switch (x) {
+            case 1:
+                document.getElementById("model-image").src = "/food/manchu.jpg";
+                document.getElementById("titleoffood").innerHTML = "Manchurian";
+                document.getElementById("discriptionoffood").innerHTML = "Veg Manchurian is a tasty Indo Chinese dish of fried veggie balls in a spicy, sweet and tangy sauce."
+                break;
+            case 2:
+            document.getElementById("model-image").src = "food/paneer-tikka.jpg";
+                document.getElementById("titleoffood").innerHTML = "Paneer Chillie";
+                document.getElementById("discriptionoffood").innerHTML = "Paneer Tikka is a popular and delicious tandoori snack ."
+                break;
+            case 3:
+            document.getElementById("model-image").src = "food/dhosa.jpg"
+                document.getElementById("titleoffood").innerHTML = "Dhosa";
+                document.getElementById("discriptionoffood").innerHTML = "All Very good south indian snack that can make your mood. "
+                break;
+            case 4:
+            document.getElementById("model-image").src = "food/grill_sand.jpg";
+                document.getElementById("titleoffood").innerHTML = "Grill-Sandwich";
+                document.getElementById("discriptionoffood").innerHTML = "If you’re in the market for a new veggie laden sandwich, try my authentic Indian Veg Grilled Sandwich."
+                break;
+            case 5:
+            document.getElementById("model-image").src = "food/manchurian-rice.jpg";
+                document.getElementById("titleoffood").innerHTML = "Manchurian-Rice";
+                document.getElementById("discriptionoffood").innerHTML = "Gravy Manchurian and fried rice is a popular Indo-Chinese combo made with deep-fried vegetable balls into spicy gravy served with Chinese flavored rice."
+                break;
+            case 6:
+            document.getElementById("model-image").src = "food/manchurian-noodles.jpg";
+                document.getElementById("titleoffood").innerHTML = "Manchurian-Noodles";
+                document.getElementById("discriptionoffood").innerHTML = "This One Pan Veg Noodle and Manchurian Stir Fry is an Indo-Chinese meal that is a hit among kids!"               
+                 break;
+            case 7:
+            document.getElementById("model-image").src = "food/paav-bhaji.jpg";
+                document.getElementById("titleoffood").innerHTML = "Pav-Bhaji";
+                document.getElementById("discriptionoffood").innerHTML = "Most loved Street Food by indians."               
+                 break;
+            case 8:
+            document.getElementById("model-image").src = "food/puff.jpg";
+                document.getElementById("titleoffood").innerHTML = "Puff";
+                document.getElementById("discriptionoffood").innerHTML = "Vegetable Puff, a snack with crisp-n-flaky outer layer and mixed vegetables stuffing."                
+                break;
+            case 9:
+            document.getElementById("model-image").src = "food/pulaav.jpg";
+                document.getElementById("titleoffood").innerHTML = "Pulao";
+                document.getElementById("discriptionoffood").innerHTML = "Pulao is basic indian style rice pilaf that is aromatic, delicious, Dish."               
+                 break;
+            case 10:
+            document.getElementById("model-image").src = "food/samosa.jpeg";
+                document.getElementById("titleoffood").innerHTML = "Samosa";
+                document.getElementById("discriptionoffood").innerHTML = "Samosa, a crispy and spicy deep fried snack."               
+                 break;
+            case 11:
+            document.getElementById("model-image").src = "food/vadapaav.jpg";
+                document.getElementById("titleoffood").innerHTML = "Vadapav";
+                document.getElementById("discriptionoffood").innerHTML = "Vada pav, alternatively spelt wada pao."               
+                 break;
+
+        }
+        modal.style.display = "block";
+    }
+
+    function closemodal()
+    {
+        modal.style.display = "none";
+    }
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    import data from "/jsonfile.json";
+    document.cookie = "j="+1+";";
+
+
+    function oreder(x,q) 
+    {
+        var Cookie = decodeURIComponent(document.cookie);
+        ca = Cookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            var c1 = ca[i].split("=");
+            // alert(c1);
+            if (c1[0].trim() == "j") {
+                var j = c1[1];
+                break;
+            }
+        }
+        localStorage.setItem(j,x.toString());
+        j = Number(j) + 1;
+        document.cookie = "j="+String(j)+";";
+        document.getElementById("model-image").src = "images/Green-Round-Tick.png";
+        document.getElementById("titleoffood").innerHTML = "Your Order added to Your cart";
+        modal.style.display = "block";
+
+
+        // data[x].qnt = q;
+        alert(q);
+    }
+    
+    
+</script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#header").load("header.html");
+
+        $("#footer").load("footer.html");
+    });
+</script>
